@@ -15,16 +15,16 @@ class DB():
 
 	Methods
 	=======
-	connectClient(parameters)
+	connect_client(parameters)
 		Attempt to connect to MongoClient
 
 		returns MongoClient object
 	'''
 
 	def __init__(self):
-		self.client = self.connect();
+		self.client = self.connect_client();
 
-	def connectClient(self):
+	def connect_client(self):
 		'''
 		Attempt to connect to MongoClient, exit if unable
 
