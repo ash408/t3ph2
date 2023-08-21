@@ -1,4 +1,5 @@
 
+import sys
 import pymongo
 
 from pymongo import MongoClient
@@ -20,16 +21,22 @@ class DB():
 	'''
 
 	def __init__(self):
-		pass
+		self.client = self.connect();
 
-	def TODO(self):
+	def connectClient(self):
 		'''
-		Description
-
-			Parameters:
-				name (type) : description
+		Attempt to connect to MongoClient, exit if unable
 
 			Returns:
-				name (type) : description
+				client (MongoClient) : a MongoDB connection
 		'''
-		pass
+
+		try:
+			client = MongoClient(serverSelectionTimeoutMS = 2000)
+			return client
+		
+		except:
+			print("Error: cannot connect to MongoDB")
+			print("Exiting...")
+
+			sys.exit()
