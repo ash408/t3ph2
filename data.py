@@ -16,7 +16,7 @@ class DB():
 	Methods
 	=======
 	connect_client(parameters)
-		Attempt to connect to MongoClient
+		Attempt to connect to MongoDB
 
 		returns MongoClient object
 	'''
