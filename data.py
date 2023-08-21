@@ -10,14 +10,15 @@ class DB():
 
 	Attributes
 	==========
-	variable : type
-		description
+	client : MongoClient
+		A MongoDB client connection
 
 	Methods
 	=======
-	TODO(parameters)
-		Description
-		returns ...
+	connectClient(parameters)
+		Attempt to connect to MongoClient
+
+		returns MongoClient object
 	'''
 
 	def __init__(self):
