@@ -33,17 +33,11 @@ class DB():
 
 	def connect_client(self):
 		'''
-		Attempt to connect to MongoClient, sets client attribute.
-
-			Returns:
-				client (MongoClient) : a MongoDB connection, or False
-									if unable to connect
+		Attempt to connect to MongoClient, sets client attribute to
+		MongoClient object, or false if connection has failed.
 		'''
-
 		try:
 			self.client = MongoClient(serverSelectionTimeoutMS = 2000)
-			return client
 		
 		except:
 			self.client = False
-			return False
