@@ -4,6 +4,7 @@ import pymongo
 
 from pymongo import MongoClient
 
+
 class DB():
 	'''
 	Database handler, using pymongo
@@ -37,7 +38,4 @@ class DB():
 			return client
 		
 		except:
-			print("Error: cannot connect to MongoDB")
-			print("Exiting...")
-
-			sys.exit()
+			return False
