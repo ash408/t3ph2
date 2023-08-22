@@ -16,10 +16,8 @@ class DB():
 
 	Methods
 	=======
-	connect_client(parameters)
+	connect_client()
 		Attempt to connect to MongoDB
-
-		returns MongoClient object or false
 
 	Schema
 	======
@@ -41,3 +39,37 @@ class DB():
 		
 		except:
 			self.client = False
+	
+	def list_databases():
+		pass
+
+	def set_database():
+		pass
+
+	def make_database():
+		pass
+
+	def delete_database():
+		pass
+
+	def set_game():
+		pass
+
+	def make_game():
+		pass
+
+	def delete_game():
+		pass
+
+	def make_item():
+		pass
+
+	def save_item():
+		pass
+
+	def get_item():
+		pass
+
+	def delete_item():
+		pass
+
