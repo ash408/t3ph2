@@ -34,14 +34,19 @@ class DB():
 		Attempt to connect to MongoClient, sets client attribute to
 		MongoClient object, or false if connection has failed.
 		'''
+
 		try:
 			self.client = MongoClient(serverSelectionTimeoutMS = 2000)
 		
 		except:
 			self.client = False
 	
-	def list_databases():
-		pass
+	def list_databases(self):
+		'''
+		Return a list of usable database names, removing schema info.
+		'''
+
+		return self.client.list_database_names()[3:]
 
 	def set_database():
 		pass
