@@ -4,7 +4,7 @@ import uuid
 
 class entity:
 
-	def __init__(self, uid=None attributes=None, labels=None, resources=None):
+	def __init__(self, uid=None, attributes=None, labels=None, resources=None):
 		
 		if (uid is None):
 			uid = str(uuid.uuid4())
