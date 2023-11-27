@@ -24,4 +24,12 @@ class Entity:
 		json_data['labels'] = self.labels
 		json_data['resources'] = self.resources
 
-		return json.dumps(json_data)
+		return json_data
+
+	def build_from_json(json_data):
+		uid = json_data.get('uid')
+		attributes = json_data.get('attributes')
+		labels = json_data.get('labels')
+		resources = json_data.get('resources')
+
+		return Entity(uid, attributes, labels, resources)
