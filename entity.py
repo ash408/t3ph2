@@ -1,4 +1,5 @@
 
+import json
 import uuid
 
 
@@ -15,3 +16,12 @@ class entity:
 		self.resources = resources
 
 
+	def generate_json(self):
+		json_data = {}
+
+		json_data['uid'] = self.uid
+		json_data['attributes'] = self.attributes
+		json_data['labels'] = self.labels
+		json_data['resources'] = self.resources
+
+		return json.dumps(json_data)
