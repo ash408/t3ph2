@@ -3,7 +3,7 @@ import json
 import uuid
 
 
-class entity:
+class Entity:
 
 	def __init__(self, uid=None, attributes=None, labels=None, resources=None):
 		
